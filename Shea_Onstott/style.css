@@ -1,0 +1,231 @@
+<<<<<<< Updated upstream
+=======
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+>>>>>>> Stashed changes
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+<<<<<<< Updated upstream
+}
+
+body {
+  background-color: lightgray;
+}
+
+/* Main Content */
+=======
+  font-family: "Ubuntu", "sans-serif";
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  border: 3px solid red; /* For testing only*/
+  background-color: lightgray;
+}
+
+p {
+  font-size: small;
+  text-align: left;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+/* Main Content */
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 5px solid blue; /* For testing only */
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5); /* Add shadow */
+  height: 100%;
+  background-color: white;
+}
+
+>>>>>>> Stashed changes
+.content {
+  max-width: 800px;
+  margin: 100px auto 0; /* Create space between content and Nav */
+  padding: 0 20px; /* Add horizontal spacing for presentation */
+  text-align: center;
+}
+
+.content h1 {
+  margin-bottom: 20px; /* Space between h1 and p */
+  color: #333;
+}
+
+/* Navabr */
+.navbar {
+  position: fixed; /* Keeps navbar at the top when scrolling */
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  display: flex; /* Space out logo from links */
+  justify-content: space-between; /* Space out logo from links */
+  align-items: center; /* Center the content within navbar */
+  padding: 0 2rem; /* Keeps content from touching edges */
+  height: 70px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, alpha)0.1; /* Subtle shadow adds depth and seperates navbar from content */
+  z-index: 1000; /* Ensures navbar appears above other elements (Important for dopdown) */
+}
+
+/* Logo style and Hover */
+.logo a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none; /* Remove underline from link */
+  transition: all 0.3s ease; /* Used with hover effect below */
+}
+
+.logo a:hover {
+  color: #72b2ed;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 5%;
+}
+
+/* Navigation Menu style */
+.nav-links {
+  display: flex; /* Make links horizontal */
+  list-style: none; /* Remove bullet pointsfrom list items/links */
+}
+
+.nav-links li a {
+  margin-left: 2rem; /* Each item gets left margin to space them */
+  font-size: small;
+}
+
+.nav-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-right: 10px;
+}
+
+.nav-links a:hover {
+  color: #72b2ed;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 5%;
+}
+
+/* Active link indicator */
+.nav-links a.active {
+  color: #acd3f5;
+  font-weight: 500;
+  border: 2px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Set to none, if not then links won't display correctly on desktop */
+  cursor: pointer;
+}
+
+/* Each bar is displayed as a block element */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+
+/* Hamburger interaction depending on screen size */
+/* Media Query targets screen size with a max width of 768px */
+@media only screen and (max-width: 768px) {
+  /* Show hamburger menu on mobile */
+  .hamburger {
+    display: block;
+  }
+
+.nav-links li a {
+  margin-left: 0;
+}
+
+  /* Animate hamburger to X when menu is active */
+  /* JavaScript will tranform bars to a X when active */
+  /* First bar moves down 8px and rotates 45 degrees */
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  /* Second bar fades out completely */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  /* Third bar moves up 8px and rotates -45 degrees */
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Position the nav menu for mobile */
+  .nav-menu {
+    position: fixed; /* Keeps menu in place while scrolling */
+    top: 70px; /* Height of the navbar */
+    left: -100%; /* Off screen placement */
+    width: 100%;
+    background-color: #1f2c39;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links a {
+    color: white;
+    width: 100%;
+    display: block;
+  }
+
+  .nav-links a:hover {
+    background-color: white;
+    color: black;
+  }
+
+  /* Show nav menu when active class is added */
+  .nav-menu.active {
+    left: 0; /* Makes the dropdown span width of screen when hamburger clicked */
+    background-color: black;
+  }
+
+  /* Stack nav links vertically */
+  .nav-links {
+    flex-direction: column;
+    padding: 5px 0; /* Adds vertical space 5px at top and bottom of dropdown */
+    margin-left: 0;
+
+  }
+
+  .nav-links li {
+    margin: 5px 0; /* Changes from horizontal margins to vertical in dropdown */
+  }
+}
